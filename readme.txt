@@ -1,1 +1,1 @@
-This rep is java project
+This rep is java project.
