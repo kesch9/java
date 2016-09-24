@@ -6,14 +6,19 @@ import org.junit.Test;
 public class MathTest {
 
     @Test
-    public void testAdd(){
-        int res = Math.add(2,2);
-        Assert.assertEquals(4,res);
+    public void test1(){
+        int res = Math.div(6, 3);
+        Assert.assertEquals(2,res);
     }
     @Test
-    public void testAdd2(){
-        int res = Math.add(0, 2);
-        Assert.assertNotEquals(5,res);
+    public void test2(){
+        int res = Math.div(8, 2);
+        Assert.assertEquals(4,res);
+    }
+
+    @Test(expected = ZeroException.class)
+    public void testZero(){
+        int res = Math.div(8, 0);
     }
 
 }
